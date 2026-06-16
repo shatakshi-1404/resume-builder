@@ -3,7 +3,7 @@
 A clean, free, browser-based resume builder with live preview and one-click PDF export. No sign-up, no backend, no data stored anywhere.
 
 ## Live Demo
-[resume-builder-xyz.vercel.app](https://resume-builder-mocha-eta.vercel.app/) ← replace with your Vercel URL
+[https://resume-builder-mocha-eta.vercel.app/](https://resume-builder-mocha-eta.vercel.app/) 
 
 ## Features
 - Live A4 resume preview as you type
