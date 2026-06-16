@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResumeForge — Free Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">⬡ ResumeForge</div>
+<div style="color: rgba(255,255,255,0.55); font-size: 12px; margin-left: 16px;">by <strong style="color:rgba(255,255,255,0.85); font-weight:600;">Shatakshi Prasad</strong> &mdash; <a href="mailto:shatakshiravaneshwarprasad@gmail.com" style="color:#93c5fd; text-decoration:none;">shatakshiravaneshwarprasad@gmail.com</a></div>
+      <div class="header-actions">
+        <button class="btn-secondary" onclick="resetForm()">Clear All</button>
+        <button class="btn-primary" onclick="downloadPDF()">Download PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-layout">
+    <!-- LEFT: Editor -->
+    <aside class="editor-panel">
+      <div class="section-block">
+        <div class="section-label">Personal Info</div>
+
+        <div class="field-group">
+          <label>Full Name</label>
+          <input type="text" id="name" placeholder="Shatakshi Prasad" oninput="renderPreview()" />
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label>Email</label>
+            <input type="text" id="email" placeholder="you@email.com" oninput="renderPreview()" />
+          </div>
+          <div class="field-group">
+            <label>Phone</label>
+            <input type="text" id="phone" placeholder="+91 98765 43210" oninput="renderPreview()" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label>LinkedIn URL</label>
+            <input type="text" id="linkedin" placeholder="linkedin.com/in/you" oninput="renderPreview()" />
+          </div>
+          <div class="field-group">
+            <label>GitHub URL</label>
+            <input type="text" id="github" placeholder="github.com/you" oninput="renderPreview()" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Portfolio / Website</label>
+          <input type="text" id="portfolio" placeholder="yoursite.com" oninput="renderPreview()" />
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-label">Summary</div>
+        <div class="field-group">
+          <label>Professional Summary</label>
+          <textarea id="summary" rows="3" placeholder="Write 2–3 sentences about your skills, goals, and what makes you a strong candidate." oninput="renderPreview()"></textarea>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-label">Education</div>
+        <div id="education-entries"></div>
+        <button class="add-btn" onclick="addEntry('education')">+ Add Education</button>
+      </div>
+
+      <div class="section-block">
+        <div class="section-label">Experience</div>
+        <div id="experience-entries"></div>
+        <button class="add-btn" onclick="addEntry('experience')">+ Add Experience</button>
+      </div>
+
+      <div class="section-block">
+        <div class="section-label">Projects</div>
+        <div id="projects-entries"></div>
+        <button class="add-btn" onclick="addEntry('projects')">+ Add Project</button>
+      </div>
+
+      <div class="section-block">
+        <div class="section-label">Skills</div>
+        <div class="field-group">
+          <label>Technical Skills (comma-separated)</label>
+          <input type="text" id="skills-tech" placeholder="React, Node.js, Python, MongoDB, AWS" oninput="renderPreview()" />
+        </div>
+        <div class="field-group">
+          <label>Soft Skills (comma-separated)</label>
+          <input type="text" id="skills-soft" placeholder="Team Leadership, Problem Solving, Communication" oninput="renderPreview()" />
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-label">Certifications & Achievements</div>
+        <div class="field-group">
+          <label>Certifications (one per line)</label>
+          <textarea id="certifications" rows="3" placeholder="IBM Generative AI Professional — 99/100&#10;Oracle OCI Certified&#10;NPTEL Elite Certification" oninput="renderPreview()"></textarea>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT: Live Preview -->
+    <section class="preview-panel">
+      <div class="preview-label">Live Preview</div>
+      <div class="resume-page" id="resume-preview">
+        <div class="resume-placeholder">
+          <span>Start filling in your details →<br>Your resume will appear here</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-credit">
+        Built by <strong>Shatakshi Prasad</strong> &mdash; <a href="mailto:shatakshiravaneshwarprasad@gmail.com">shatakshiravaneshwarprasad@gmail.com</a>
+      </div>
+      <a class="dh-btn" href="https://digitalheroesco.com" target="_blank" rel="noopener">Built for Digital Heroes</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
